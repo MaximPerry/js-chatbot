@@ -1,0 +1,52 @@
+﻿/* Your custom CSS here */
+* {
+    font-family: 'Century Gothic';
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #25CEB6;
+    background: linear-gradient(137deg, #2F343D 0%, rgb(43, 48, 56) 100%); 
+    overflow: hidden;
+}
+html, body, h1, h2, h3, h4, h5, h6, div, ul, p, input, button {
+    padding: 0;
+    margin: 0;
+}
+div {
+    width: 100%;
+    height: calc(100% - 30px);
+    color: white;
+    opacity: 0.9;
+    overflow-y: scroll;
+}
+form {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+input {
+    width: calc(100% - 50px);
+    box-sizing: border-box;
+    height: 30px;
+    background: linear-gradient(137deg, rgb(26, 29, 34) 0%, rgb(23, 26, 31) 100%);  
+    border: none;
+    padding-left: 10px;
+    color: rgb(209, 209, 209);
+}
+button {
+    width: 50px;
+    box-sizing: border-box;
+    height: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.856);
+    color: #2A2F37;
+}
+p {
+    margin: 7px;
+    border-radius: 5px;
+    padding: 7px;
+    background: rgba(255, 255, 255, 0.856);
+    color: #2A2F37;
+    box-shadow: 9px 9px 12px -6px rgba(0,0,0,0.45);
+}

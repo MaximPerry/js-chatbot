@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Frank II</title>
+</head>
+<body>
+    <!-- Import scripts -->
+    <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="bots.js"></script>
+    <script src="frank2.js"></script>
+
+    <!-- Output -->
+    <script>        
+        $(function() {
+            var input = $("input");
+            $("form").submit(function(e) {
+                var r = Bots.sendMessage("frank2", input.val(), { "USER": "mrfishie" });
+                $("<p style='display:none; text-align: right';></p>").appendTo("div").text(input.val() + " [Guess]").fadeIn("fast", toBottom);
+                input.val("");
+                
+                setTimeout(function() {
+                    for (var i = 0; i < r.length; i++) {
+                        $("<p style='display:none;'></p>").appendTo("div").text("[Frank II] " + r[i]).fadeIn("fast", toBottom);
+                    }
+                }, Math.random() * 3000);
+                                
+                e.preventDefault();
+                return false;
+            });
+        });
+        
+        function toBottom() {
+            $("div").scrollTop($("div").get("scrollHeight"));
+        }
+    </script>
+
+    <div></div>
+    <form method="get" action="#">
+        <input type="text" /><button type="submit">Go</button>
+    </form>
+</body>
+</html>

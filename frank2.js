@@ -6,7 +6,7 @@ Bots.push({
     "actions": [
         {
             "catch": ["^hello^"],
-            "response": "Hello!"
+            "response": "^hello^"
         },
         {
             "catch": ["*hellow*"],
@@ -15,7 +15,7 @@ Bots.push({
                     "text": "I think it is written like 'hello'?",
                     "actions": [
                         {
-                            "catch": ["*yes*"],
+                            "catch": ["^yes^"],
                             "response": "No biggie! Howdy to you ;-)"
                         }
                     ]
@@ -24,13 +24,13 @@ Bots.push({
         },
         {
             "catch": ["^how are you^"],
-            "response": "I'm not exactly the kind to have feelings. But thanks for asking :-D! How about you?"
+            //"response": [] "I'm not exactly the kind to have feelings. But thanks for asking :-D! How about you?"
         }, {
             "catch": ["^I'm good^"],
             "response": "My name is Frank II. What's yours?"
         }, 
         {
-            "catch": ["Can you do the dishes?"],
+            "catch": ["*do the dishes*"],
             "response": "You wish."
         }
     ],
@@ -40,9 +40,10 @@ Bots.push({
     
     "functions": {},
     "synonyms": [
-        ["hello", "hi", "morning", "good morning", "good afternoon", "good evening", "*hey*"],
+        ["hello", "hi", "yo", "morning", "good morning", "good afternoon", "good evening", "*hey*"],
         ["how are you", "how do you do"],
-        ["I'm good", "good", "I'm okay", "okay", "I'm alright", "alright", "*fine*"]
+        ["I'm good", "good", "I'm okay", "okay", "I'm alright", "alright", "*fine*", "*great*"],
+        ["yes", "*yes*", "*indeed*", "*in fact*"]
     ],
     "variables": {}
 });

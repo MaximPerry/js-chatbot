@@ -1,3 +1,5 @@
+var $ = require("jquery");
+var jQuery = require("jquery");
 var Bots = {};
 (function($) {
     var variables = {}, botlist = [];
